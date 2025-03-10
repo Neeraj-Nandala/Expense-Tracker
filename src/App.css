@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ✅ HEADER SECTION */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* ✅ BALANCE, INCOME, EXPENSES */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+}
+
+/* ✅ TRANSACTIONS & BUDGET OVERVIEW */
+.content-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+  flex: 1;
+}
+
+/* ✅ MAKE RECENT TRANSACTIONS SCROLLABLE */
+.transaction-list {
+  max-height: 300px; /* Fixed height */
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.transaction-item.expense {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.transaction-item.income {
+  background: #d1fae5;
+  color: #16a34a;
+}
+
+/* ✅ BUDGET PROGRESS BARS */
+.budget-overview .progress-bar {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.budget-overview .progress-fill {
+  height: 6px;
+  transition: width 0.5s;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
